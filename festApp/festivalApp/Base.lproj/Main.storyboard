@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJf-8R-ttv">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="festivalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="aZA-3d-HbD">
+                                <rect key="frame" x="171" y="413.66666666666669" width="72" height="69"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yv-NZ-jhA">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="mapBttn"/>
+                                        <connections>
+                                            <segue destination="lYF-t9-Kge" kind="show" id="352-Hw-Yeh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icV-Vf-L9I">
+                                        <rect key="frame" x="0.0" y="39" width="72" height="30"/>
+                                        <state key="normal" title="profileBttn"/>
+                                        <connections>
+                                            <segue destination="FjA-5a-sZK" kind="show" id="52v-hU-x8R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.087070485517695029" green="0.96095638290678387" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aZA-3d-HbD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BN8-xY-HhR"/>
+                            <constraint firstItem="aZA-3d-HbD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vBy-dz-tdD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RsY-eE-bcM"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1407" y="485"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="xnh-Lo-tzK">
+            <objects>
+                <viewController id="lYF-t9-Kge" customClass="MapViewController" customModule="festivalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="De0-8R-6dn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-k3-Ez8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.017059416585213816" green="1" blue="0.17123248932872892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wrx-k3-Ez8" firstAttribute="top" secondItem="vO2-fe-hmT" secondAttribute="top" id="GQI-xF-ney"/>
+                            <constraint firstItem="Wrx-k3-Ez8" firstAttribute="top" secondItem="vO2-fe-hmT" secondAttribute="top" id="SeQ-eg-7nB"/>
+                            <constraint firstItem="vO2-fe-hmT" firstAttribute="trailing" secondItem="Wrx-k3-Ez8" secondAttribute="trailing" id="W10-e1-3M5"/>
+                            <constraint firstItem="vO2-fe-hmT" firstAttribute="bottom" secondItem="Wrx-k3-Ez8" secondAttribute="bottom" id="cRu-rL-Vej"/>
+                            <constraint firstItem="Wrx-k3-Ez8" firstAttribute="leading" secondItem="vO2-fe-hmT" secondAttribute="leading" id="nir-sP-sEG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vO2-fe-hmT"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Wrx-k3-Ez8" id="Ntc-Dk-1ZA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5rQ-iz-pIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ok3-vh-Npl">
+            <objects>
+                <viewController id="FjA-5a-sZK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hke-p9-v9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95831897885078599" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="PYG-AR-4R7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6n-JT-uSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="873"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="z9l-T3-bBk">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hJf-8R-ttv" customClass="LoginViewController" customModule="festivalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MUh-iq-duf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="tM8-7M-jt3">
+                                <rect key="frame" x="95" y="371.66666666666669" width="224" height="153.00000000000006"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USERNAME" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="grh-cF-ioU">
+                                        <rect key="frame" x="50" y="0.0" width="124" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PASSWORD" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-84-sIQ">
+                                        <rect key="frame" x="49" y="41" width="126" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npC-Jb-3lK">
+                                        <rect key="frame" x="89.666666666666657" y="82" width="45" height="30"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="hJf-8R-ttv" eventType="touchUpInside" id="iNG-nx-twD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftW-Gx-fDR">
+                                        <rect key="frame" x="0.0" y="123" width="224" height="30"/>
+                                        <state key="normal" title="Dont' have an account? SIGN UP">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="6fo-Da-RRr"/>
+                                    <constraint firstAttribute="height" constant="153" id="ez0-GE-dNc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.21437257592752168" blue="0.75250557986892153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tM8-7M-jt3" firstAttribute="centerX" secondItem="MUh-iq-duf" secondAttribute="centerX" id="hz8-FB-d55"/>
+                            <constraint firstItem="tM8-7M-jt3" firstAttribute="centerY" secondItem="MUh-iq-duf" secondAttribute="centerY" id="kNu-Jw-MVF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Qi-hZ-D32"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="1Fh-84-sIQ" id="Rja-Ox-sge"/>
+                        <outlet property="usernmeField" destination="1Fh-84-sIQ" id="FI6-gE-7QR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkh-n4-OTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-544.92753623188412" y="484.82142857142856"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="FBq-Jv-nJo">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="skU-c9-FQc" customClass="MainNavigationController" customModule="festivalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Anu-iM-Hsu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PBn-wS-GMA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yD-aS-FDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482.60869565217394" y="484.82142857142856"/>
+        </scene>
+    </scenes>
+</document>
