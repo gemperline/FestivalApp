@@ -106,8 +106,8 @@
 				8B79B57723579A8400D67325 /* Assets.xcassets */,
 				8B79B57923579A8400D67325 /* LaunchScreen.storyboard */,
 				8B79B57C23579A8400D67325 /* Info.plist */,
-				8B79B59E2357AED000D67325 /* MainNavigationController.swift */,
 				8B79B5A02357B3BE00D67325 /* LoginViewController.swift */,
+				8B79B59E2357AED000D67325 /* MainNavigationController.swift */,
 				8B79B5A22357BCCC00D67325 /* MapViewController.swift */,
 			);
 			path = festivalApp;
